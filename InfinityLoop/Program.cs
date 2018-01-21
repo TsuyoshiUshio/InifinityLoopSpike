@@ -17,7 +17,7 @@ namespace InfinityLoop
             const int agentNumber = 1000;
             Task[] tasks = new Task[agentNumber];
             var cts = new CancellationTokenSource();
-            for(var i = 0; i < agentNumber; i++)
+            foreach (var i in Enumerable.Range(0, agentNumber))
             {
                 tasks[i] = printOutAsync(i, cts.Token);
             }
